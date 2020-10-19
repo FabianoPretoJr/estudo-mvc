@@ -1,0 +1,18 @@
+@{
+    Layout = null; // Aqui é aonde vc seleciona qual layout será usado nesse View, os Layouts ficam na pasta Shared, muito parececida com a fornma de trabalhar com components em React
+}
+
+<h1>@ViewData["nome"]</h1>
+
+@if((bool)ViewData["HelloWorld"]){
+    /* Dá pra fazer estruturas condicionais com esses dados, o meu não reclamou, mas se reclamar de não saber qual o tipo que ta sendo passado, 
+    basta por um (tipoDoDado)ViewData["HelloWorld"], nesse formato mas cuidado quando fazer algo assim, na real deu erro e o VS Code não aponto :( */
+
+    <h1>Olá Mundo! - Minha primeira View</h1> // Com o @ViewData vc recebe o dado vindo do Controller, antes deu apagar tinha um @ViewData["HelloWorld"] dentro do h1
+}
+else
+{
+    <h1>Tchau Mundo!</h1>
+}
+
+<!--ASPNET Core usa um motor de renderização, usa o Razor, template enginner-->
