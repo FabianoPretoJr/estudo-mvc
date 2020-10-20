@@ -3,6 +3,7 @@
 <h2>Cadastro de Funcionários</h2>
 
 <form class="form-horizontal" asp-controller="Funcionarios" asp-action="Salvar" method="POST">
+    <input type="hidden" asp-for="Id">
     <input type="text" class="form-control" asp-for="Nome" placeholder="Nome"><br/>
     <input type="number" class="form-control" asp-for="Salario" placeholder="Salario"><br/>
     <input type="text" class="form-control" asp-for="Cpf" placeholder="CPF"><br/>

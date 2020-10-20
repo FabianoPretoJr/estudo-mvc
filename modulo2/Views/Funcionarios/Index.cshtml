@@ -1,0 +1,16 @@
+@model IEnumerable<modulo2.Models.Funcionario> //Indica que vc quer tratablhar com vários funcionarios, mais de um
+
+<h2>Todos os funcionários</h2>
+<a href="/Funcionarios/Cadastrar" class="btn btn-success">Novo funcionário</a>
+<hr/>
+
+@foreach (var funcionario in Model) // Acessa os dados que tão vindo de controller, que vem do banco de dados, o tipo dele é definido ali em cima
+{
+    <p>CPF: @funcionario.Cpf</p>
+    <p>Nome: @funcionario.Nome</p>
+    <p>Salário: @funcionario.Salario</p>
+    <a href="/Funcionarios/Editar/@funcionario.Id" class="btn btn-success">Editar</a>
+    <a href="/Funcionarios/Deletar/@funcionario.Id" class="btn btn-danger">Deletar</a>
+    <hr/>
+    <br/>
+}

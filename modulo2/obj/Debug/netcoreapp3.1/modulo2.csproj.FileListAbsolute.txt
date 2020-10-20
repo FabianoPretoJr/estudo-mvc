@@ -59,3 +59,4 @@ C:\Users\FOEU\My Private Documents\Projetos\estudo-mvc\modulo2\obj\Debug\netcore
 C:\Users\FOEU\My Private Documents\Projetos\estudo-mvc\modulo2\obj\Debug\netcoreapp3.1\modulo2.genruntimeconfig.cache
 C:\Users\FOEU\My Private Documents\Projetos\estudo-mvc\modulo2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\FOEU\My Private Documents\Projetos\estudo-mvc\modulo2\obj\Debug\netcoreapp3.1\Razor\Views\Funcionarios\Cadastrar.cshtml.g.cs
+C:\Users\FOEU\My Private Documents\Projetos\estudo-mvc\modulo2\obj\Debug\netcoreapp3.1\Razor\Views\Funcionarios\Index.cshtml.g.cs
