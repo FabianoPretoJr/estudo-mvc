@@ -30,10 +30,17 @@ namespace modulo4
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql( // Alterar aqui de UseSqlServer para UseMySql
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<IdentityUser>(options => {
+                options.SignIn.RequireConfirmedAccount = true; // Defini que é obrigatorio ter confirmado E-mail
+                // options.Password.RequireNonAlphanumeric = false; // Tira definição que a senha deve ter Alpha númericos
+                // options.Password.RequireUppercase = false; // Tira definição que a senha deve ter Caracter maiusculo
+                // options.Password.RequireLowercase = false; // Tira definição que a senha deve ter Caracter minusculo
+            })
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
            services.AddRazorPages();
+
+           services.AddAuthorization(options => options.AddPolicy("TemNome", policy => policy.RequireClaim("FullName", "Fabiano Preto"))); // Criação de política para autenticações mais especificas, exemplo ao inves de nome poderia ser por cargo
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
