@@ -16,7 +16,7 @@ namespace modulo3.Database
         {
 
         }
-        // Tem que criar essa class de conexão para hedar e se conectar com o pacote do Identity
+        // Tem que criar essa class de conexão para herdar e se conectar com o pacote do Identity
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) // Ativa o Lazy Loanding na aplicação
         {
